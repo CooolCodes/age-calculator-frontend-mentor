@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="input_section">
+        <div class="day">
+          <h1 class="text">day</h1>
+          <input
+            type="number"
+            class="textarea"
+            id="day-input"
+            maxlength="2"
+            placeholder="01"
+          />
+          <p class="error-day">Must be a valid Day</p>
+        </div>
+        <div class="month">
+          <h1 class="text">month</h1>
+          <select name="" id="month-input" class="month-options">
+            <option value="0">Select Month</option>
+            <option value="1">01</option>
+            <option value="02">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <p class="error-month">Select a valid Month</p>
+        </div>
+        <div class="year">
+          <h1 class="text">year</h1>
+          <input
+            type="number"
+            class="textarea"
+            id="year-input"
+            placeholder="1960"
+            onKeyPress="if( this.value.length == 4 ) return false; "
+          />
+          <p class="error-year">Must be a valid Year</p>
+        </div>
+      </section>
+      <div class="divider">
+        <img
+          src="https://res.cloudinary.com/dvydugv8v/image/upload/v1683618512/icon-arrow_m90yyr.svg"
+          alt="arrow-icon"
+          class="arrow"
+        />
+      </div>
+      <section class="output">
+        <div class="output-text">
+          <h2 class="year-output"></h2>
+          <span>years</span>
+        </div>
+        <div class="output-text">
+          <h2 class="month-output"></h2>
+          <span>months</span>
+        </div>
+        <div class="output-text">
+          <h2 class="day-output"></h2>
+          <span>days</span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
