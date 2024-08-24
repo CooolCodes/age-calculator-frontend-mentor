@@ -1,5 +1,6 @@
 //Defining Elements
 const submit = document.querySelector(".divider");
+const arrow = document.querySelector(".arrow");
 const birthDay = document.querySelector("#day-input");
 const birthMonth = document.querySelector("#month-input");
 const birthYear = document.querySelector("#year-input");
@@ -72,6 +73,7 @@ submit.addEventListener("click", () => {
     numberYears.textContent = ageYear;
     numberDays.textContent = ageDays;
     numberMonth.textContent = ageMonth;
+    arrow.style.left = "50%";
   } else {
     numberYears.textContent = "--";
     numberDays.textContent = "--";

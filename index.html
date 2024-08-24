@@ -37,13 +37,21 @@
             class="textarea"
             id="day-input"
             maxlength="2"
-            placeholder="01"
+            placeholder="DD"
+            onKeyPress="if( this.value.length == 2 ) return false;"
           />
           <p class="error-day">Must be a valid Day</p>
         </div>
         <div class="month">
           <h1 class="text">month</h1>
-          <select name="" id="month-input" class="month-options">
+          <input
+            type="number"
+            class="textarea"
+            id="month-input"
+            placeholder="MM"
+            onKeyPress="if( this.value.length == 2 ) return false; "
+          />
+          <!--<select name="" id="month-input" class="month-options">
             <option value="0">Select Month</option>
             <option value="1">01</option>
             <option value="02">02</option>
@@ -57,7 +65,7 @@
             <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
-          </select>
+          </select>-->
           <p class="error-month">Select a valid Month</p>
         </div>
         <div class="year">
@@ -66,7 +74,7 @@
             type="number"
             class="textarea"
             id="year-input"
-            placeholder="1960"
+            placeholder="YYYY"
             onKeyPress="if( this.value.length == 4 ) return false; "
           />
           <p class="error-year">Must be a valid Year</p>
@@ -81,15 +89,15 @@
       </div>
       <section class="output">
         <div class="output-text">
-          <h2 class="year-output"></h2>
+          <h2 class="year-output">--</h2>
           <span>years</span>
         </div>
         <div class="output-text">
-          <h2 class="month-output"></h2>
+          <h2 class="month-output">--</h2>
           <span>months</span>
         </div>
         <div class="output-text">
-          <h2 class="day-output"></h2>
+          <h2 class="day-output">--</h2>
           <span>days</span>
         </div>
       </section>
